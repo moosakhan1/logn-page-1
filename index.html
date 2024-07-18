@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="auth-container">
+        <div id="login-container" style="width: 100%;" class="auth-box">
+            <h2>Login</h2>
+            <input type="text" style="
+            padding: 10px 3px;
+        " id="login-username" placeholder="Username">
+            <input style="
+            padding: 10px 3px;
+        " type="password" id="login-password" placeholder="Password">
+            <button class="a" onclick="login()">Login</button>
+            <p>Don't have an account? <span class="a" onclick="showSignUp()">Sign Up</span></p>
+        </div>
+        <div id="signup-container" class="auth-box hidden">
+            <h2>Sign Up</h2>
+            <input style="
+            padding: 10px 3px;
+        " type="text" id="signup-username" placeholder="Username">
+            <input style="
+            padding: 10px 3px;
+        " type="password" id="signup-password" placeholder="Password">
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <span onclick="showLogin()">Login</span></p>
+        </div>
+    </div>
+    <div id="profile-container" class="hidden">
+        <h2>Welcome, <span id="username-display"></span></h2>
+        <input type="file" id="upload-image" accept="image/*">
+        <img id="profile-image" src="" alt="Profile Image">
+        <button onclick="logout()">Logout</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
